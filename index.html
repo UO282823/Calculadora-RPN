@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Calculadora RPN</title>
+        <meta name="author" content="Hugo Pulido Pensado" />
+        <meta name="description" content="Calculadora RPN" />
+        <meta name ="keywords" content ="Calculadora, RPN, Calculadora notacio polaca, notacion polaca" />
+        <meta name ="viewport" content ="width=device-width, initial scale=1.0" />
+        <script src="CalculadoraRPN.js"></script>
+        <link rel="stylesheet" type="text/css" href="CalculadoraRPN.css" />
+    </head>
+    <body>
+        <h1>Calculadora RPN</h1>
+        <form>
+
+            <label for="pila">Pila</label>
+            <textarea name="pila" id="pila"  rows="5" disabled></textarea>
+            
+            <label for="pantalla">Pantalla</label>
+            <input type="text" name="pantalla" id="pantalla" value="" lang="es" disabled>
+
+            <input type="button" value="sin" onclick="calculadoraRPN.sin()" >
+            <input type="button" value="cos" onclick="calculadoraRPN.cos()" >
+            <input type="button" value="tan" onclick="calculadoraRPN.tan()" >
+            <input type="button" value="C Pila" onclick="calculadoraRPN.borrarPila()" >
+
+            <input type="button" value="asin" onclick="calculadoraRPN.asin()" >
+            <input type="button" value="acos" onclick="calculadoraRPN.acos()" >
+            <input type="button" value="atan" onclick="calculadoraRPN.atan()" >
+            <input type="button" value="C Pant" onclick="calculadoraRPN.borrarPantalla()" >
+
+            <input type="button" value="7" onclick="calculadoraRPN.digitos(7)" >
+            <input type="button" value="8" onclick="calculadoraRPN.digitos(8)" >
+            <input type="button" value="9" onclick="calculadoraRPN.digitos(9)" >
+            <input type="button" value="/" onclick="calculadoraRPN.division()" >
+
+            <input type="button" value="4" onclick="calculadoraRPN.digitos(4)" >
+            <input type="button" value="5" onclick="calculadoraRPN.digitos(5)" >
+            <input type="button" value="6" onclick="calculadoraRPN.digitos(6)" >
+            <input type="button" value="*" onclick="calculadoraRPN.producto()" >
+            
+
+            <input type="button" value="1" onclick="calculadoraRPN.digitos(1)" >
+            <input type="button" value="2" onclick="calculadoraRPN.digitos(2)" >
+            <input type="button" value="3" onclick="calculadoraRPN.digitos(3)" >
+            <input type="button" value="-" onclick="calculadoraRPN.menos()" >
+
+            <input type="button" value="0" onclick="calculadoraRPN.digitos(0)" >
+            <input type="button" value="." onclick="calculadoraRPN.punto()" >
+            <input type="button" value="+-" onclick="calculadoraRPN.masMenos()" >
+            <input type="button" value="+" onclick="calculadoraRPN.mas()" >
+
+
+
+            <input type="button" value="ENTER" onclick="calculadoraRPN.enter()" >
+            <input type="button" value="← Pila" onclick="calculadoraRPN.borrarUltimoPila()" >
+            <input type="button" value="← Pant" onclick="calculadoraRPN.borrarDigito()" >
+            
+            
+            
+            
+
+        
+        </form>
+
+    </body>
+</html>
