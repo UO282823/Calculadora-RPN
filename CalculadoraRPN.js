@@ -20,6 +20,8 @@ class CalculadoraRPN{
         document.querySelector('input[type=text][name=\"pantalla\"]').value = this.pantalla;
     }
 
+   
+
     muestraPila(){
         let str="";
         for(var i = this.pila.length-1; i>=0;i--){
@@ -76,6 +78,20 @@ class CalculadoraRPN{
         var result = Number(op2)/Number(op1);
         this.pila.push(result);
         this.muestraPila();
+    }
+
+    raiz(){
+        if(this.pila.length<1){
+            return;
+        }
+        var op = this.pila.pop();
+        var result = Math.sqrt(Number(op));
+        if(result.toString()=="NaN"){
+            return;
+        }
+        this.pila.push(result);
+        this.muestraPila();
+        
     }
 
     borrarUltimoPila(){
